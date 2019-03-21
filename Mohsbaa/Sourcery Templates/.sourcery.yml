@@ -1,0 +1,6 @@
+sources:
+- Mohsbaa/Models
+templates:
+- Mohsbaa/Templates
+output:
+Mohsbaa/Models

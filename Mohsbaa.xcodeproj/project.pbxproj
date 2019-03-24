@@ -24,6 +24,12 @@
 		6C314E9B22411DDC00C3AA46 /* .sourcery.yml in Resources */ = {isa = PBXBuildFile; fileRef = 6C314E9A22411DDC00C3AA46 /* .sourcery.yml */; };
 		6C314E9D22411EA900C3AA46 /* JSONRepresentable.stencil in Resources */ = {isa = PBXBuildFile; fileRef = 6C314E9C22411EA900C3AA46 /* JSONRepresentable.stencil */; };
 		6C314E9F22411EE500C3AA46 /* JSONAutoRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C314E9E22411EE500C3AA46 /* JSONAutoRepresentable.swift */; };
+		6C51E5482245733000F657DA /* SubTaskTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C51E5472245733000F657DA /* SubTaskTextField.swift */; };
+		6C51E54A224575F300F657DA /* NewTaskPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C51E549224575F300F657DA /* NewTaskPresenter.swift */; };
+		6C51E54C2245762400F657DA /* NewTaskInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C51E54B2245762400F657DA /* NewTaskInteractor.swift */; };
+		6C51E5502245767E00F657DA /* TaskAndSubTaskGrouping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C51E54F2245767E00F657DA /* TaskAndSubTaskGrouping.swift */; };
+		6C51E553224582B000F657DA /* RemoteDataProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C51E552224582B000F657DA /* RemoteDataProxy.swift */; };
+		6C51E55522458C5A00F657DA /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C51E55422458C5A00F657DA /* Reachability.swift */; };
 		7FE5BBE68A2708EE7EAACDBB /* Pods_MohsbaaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC588EDB01E490E9055756DD /* Pods_MohsbaaTests.framework */; };
 		80420A6C579CCC163C6BF40D /* Pods_Mohsbaa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2925784D7ACFF9CD130401F3 /* Pods_Mohsbaa.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +68,12 @@
 		6C314E9A22411DDC00C3AA46 /* .sourcery.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .sourcery.yml; sourceTree = "<group>"; };
 		6C314E9C22411EA900C3AA46 /* JSONRepresentable.stencil */ = {isa = PBXFileReference; lastKnownFileType = text; path = JSONRepresentable.stencil; sourceTree = "<group>"; };
 		6C314E9E22411EE500C3AA46 /* JSONAutoRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONAutoRepresentable.swift; sourceTree = "<group>"; };
+		6C51E5472245733000F657DA /* SubTaskTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubTaskTextField.swift; sourceTree = "<group>"; };
+		6C51E549224575F300F657DA /* NewTaskPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskPresenter.swift; sourceTree = "<group>"; };
+		6C51E54B2245762400F657DA /* NewTaskInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskInteractor.swift; sourceTree = "<group>"; };
+		6C51E54F2245767E00F657DA /* TaskAndSubTaskGrouping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskAndSubTaskGrouping.swift; sourceTree = "<group>"; };
+		6C51E552224582B000F657DA /* RemoteDataProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataProxy.swift; sourceTree = "<group>"; };
+		6C51E55422458C5A00F657DA /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		7AD59D602FD8E7CC01AE36C8 /* Pods-Mohsbaa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mohsbaa.debug.xcconfig"; path = "Target Support Files/Pods-Mohsbaa/Pods-Mohsbaa.debug.xcconfig"; sourceTree = "<group>"; };
 		9ECD7A1C8BE2E53704179407 /* Pods-Mohsbaa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mohsbaa.release.xcconfig"; path = "Target Support Files/Pods-Mohsbaa/Pods-Mohsbaa.release.xcconfig"; sourceTree = "<group>"; };
 		CC588EDB01E490E9055756DD /* Pods_MohsbaaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MohsbaaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +123,7 @@
 		6C314E29223FF62600C3AA46 /* Mohsbaa */ = {
 			isa = PBXGroup;
 			children = (
+				6C51E5512245826A00F657DA /* networkLayer */,
 				6C314E9922411DB400C3AA46 /* Sourcery Templates */,
 				6C314E50223FF7AE00C3AA46 /* Set Dial Judge Progress */,
 				6C314E4F223FF79500C3AA46 /* View Dialy Judges */,
@@ -201,6 +214,7 @@
 		6C314E60224003A500C3AA46 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6C51E54F2245767E00F657DA /* TaskAndSubTaskGrouping.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -209,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				6C314E66224004BD00C3AA46 /* NewTaskViewController.swift */,
+				6C51E5472245733000F657DA /* SubTaskTextField.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -216,6 +231,7 @@
 		6C314E62224003B000C3AA46 /* presenter */ = {
 			isa = PBXGroup;
 			children = (
+				6C51E549224575F300F657DA /* NewTaskPresenter.swift */,
 			);
 			path = presenter;
 			sourceTree = "<group>";
@@ -223,6 +239,7 @@
 		6C314E63224003C000C3AA46 /* interactor */ = {
 			isa = PBXGroup;
 			children = (
+				6C51E54B2245762400F657DA /* NewTaskInteractor.swift */,
 			);
 			path = interactor;
 			sourceTree = "<group>";
@@ -235,6 +252,15 @@
 				6C314E9E22411EE500C3AA46 /* JSONAutoRepresentable.swift */,
 			);
 			path = "Sourcery Templates";
+			sourceTree = "<group>";
+		};
+		6C51E5512245826A00F657DA /* networkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				6C51E552224582B000F657DA /* RemoteDataProxy.swift */,
+				6C51E55422458C5A00F657DA /* Reachability.swift */,
+			);
+			path = networkLayer;
 			sourceTree = "<group>";
 		};
 		D6D609E4BD429F80FABD8C56 /* Pods */ = {
@@ -269,7 +295,6 @@
 				6C314E24223FF62600C3AA46 /* Frameworks */,
 				6C314E25223FF62600C3AA46 /* Resources */,
 				14A25587A7F25F818C2047AB /* [CP] Embed Pods Frameworks */,
-				6C314E9822411D8400C3AA46 /* Sourcery Script */,
 			);
 			buildRules = (
 			);
@@ -409,24 +434,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6C314E9822411D8400C3AA46 /* Sourcery Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Sourcery Script";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "$PODS_ROOT/Sourcery/bin/sourcer\n";
-		};
 		EBFBCE4E12B5E750A1238436 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -459,12 +466,18 @@
 				6C314E5D223FFC2400C3AA46 /* TaskTableViewCell.swift in Sources */,
 				6C314E2D223FF62600C3AA46 /* TasksListViewController.swift in Sources */,
 				6C314E57223FFA9300C3AA46 /* TasksDataRepository.swift in Sources */,
+				6C51E5482245733000F657DA /* SubTaskTextField.swift in Sources */,
 				6C314E9F22411EE500C3AA46 /* JSONAutoRepresentable.swift in Sources */,
+				6C51E54C2245762400F657DA /* NewTaskInteractor.swift in Sources */,
 				6C314E33223FF62600C3AA46 /* Mohsbaa.xcdatamodeld in Sources */,
 				6C314E67224004BD00C3AA46 /* NewTaskViewController.swift in Sources */,
 				6C314E65224003D300C3AA46 /* NewTaskRouter.swift in Sources */,
+				6C51E5502245767E00F657DA /* TaskAndSubTaskGrouping.swift in Sources */,
 				6C314E2B223FF62600C3AA46 /* AppDelegate.swift in Sources */,
+				6C51E553224582B000F657DA /* RemoteDataProxy.swift in Sources */,
 				6C314E5A223FFB1C00C3AA46 /* Task.swift in Sources */,
+				6C51E54A224575F300F657DA /* NewTaskPresenter.swift in Sources */,
+				6C51E55522458C5A00F657DA /* Reachability.swift in Sources */,
 				6C314E52223FF96600C3AA46 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

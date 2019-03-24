@@ -7,24 +7,42 @@
 //
 
 import UIKit
-
-class NewTaskViewController: UIViewController {
-
+protocol NewTaskView {
+    func dismiss()
+}
+final class NewTaskViewController: UIViewController {
+    @IBOutlet private weak var stackView: UIStackView!
+    @IBOutlet private weak var taskTextField: UITextField!
+    
+    private var subTasksFields = [SubTaskTextField]()
+    var presenter:NewTaskPresenter?
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        let addItem = UIBarButtonItem(image: #imageLiteral(resourceName: "save_list"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(self.onSaveClicked))
+        
+        self.navigationItem.rightBarButtonItem = addItem
+        
+    }
+    @objc private func onSaveClicked(sender:Any){
+        let task = UserTask(name: taskTextField.text ?? "")
+        presenter?.onSaveNewTaskClicked(task: task)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    
+    
+    
+    @IBAction func addSubTask(_ sender: Any) {
+        let newSubTaskField = SubTaskTextField()
+        self.stackView.addArrangedSubview(newSubTaskField)
+        subTasksFields.append(newSubTaskField)
     }
-    */
-
+    
+}
+extension NewTaskViewController:NewTaskView{
+    func dismiss() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    
 }

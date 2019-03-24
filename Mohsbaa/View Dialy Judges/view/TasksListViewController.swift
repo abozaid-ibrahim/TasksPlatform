@@ -12,7 +12,7 @@ final class TasksListViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let addItem = UIBarButtonItem(image: #imageLiteral(resourceName: "appointment"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(self.onAddClicked(sender:)))
+        let addItem = UIBarButtonItem(image: #imageLiteral(resourceName: "add_list"), landscapeImagePhone: nil, style: .plain, target: self, action: #selector(self.onAddClicked(sender:)))
         
         self.navigationItem.rightBarButtonItem = addItem
     

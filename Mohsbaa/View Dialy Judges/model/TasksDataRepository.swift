@@ -10,9 +10,14 @@ import Foundation
 
 protocol TasksRepository {
     func getAllTasks()
+    func addNewTask(task:Task)
 }
 
 final class TasksDataRepository:TasksRepository{
+    func addNewTask(task: Task) {
+        
+    }
+    
     func getAllTasks() {
         
     }

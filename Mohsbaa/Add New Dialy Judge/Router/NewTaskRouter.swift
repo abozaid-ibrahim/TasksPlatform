@@ -7,16 +7,26 @@
 //
 
 import UIKit
+
 final class NewTaskRouter{
     
     class func createNewTaskModule() -> UIViewController {
         let viewController = UIStoryboard.main.instantiateViewController(withIdentifier: "NewTaskViewController")
-        guard  viewController is NewTaskViewController else  {return UIViewController()}
-        return viewController
+        guard let newTaskVC = viewController as? NewTaskViewController else  {return UIViewController()}
+        let presenter = NewUserTaskPresenter()
+        let interactor = NewUserTaskInteractor(network: RemoteDataHandler())
+        interactor.presenter = presenter
+        newTaskVC.presenter = presenter
+        presenter.interactor = interactor
+        presenter.attach(view: newTaskVC)
+        return newTaskVC
         
         
     }
-    
+    func presentHome(source:NewTaskView){
+        guard let sourceView = source as? UIViewController else {return}
+        sourceView.navigationController?.popViewController(animated: true)
+    }
     
     
     

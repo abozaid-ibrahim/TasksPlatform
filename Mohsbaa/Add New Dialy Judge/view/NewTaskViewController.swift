@@ -23,7 +23,7 @@ final class NewTaskViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = addItem
         
     }
-//    @objc private func onSaveClicked(sender:Any){
+    @objc private func onSaveClicked(sender:Any){
 //        let task = UserTask(context: taskTextField.text ?? "")
 //        task.subTasks  = subTasksFields.map{ $0.text ?? "" }
 //            .filter{!$0.isEmpty}

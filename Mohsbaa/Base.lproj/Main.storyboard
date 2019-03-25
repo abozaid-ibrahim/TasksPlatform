@@ -10,6 +10,42 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Selection View Controller-->
+        <scene sceneID="WPg-Sg-mqG">
+            <objects>
+                <viewController storyboardIdentifier="SelectionViewController" id="FM3-Yh-0ar" customClass="SelectionViewController" customModule="Mohsbaa" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qeA-LG-smN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sfp-JJ-wOU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="637"/>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hwa-Xq-DJp">
+                                <rect key="frame" x="0.0" y="637" width="375" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TVF-KQ-dVD" firstAttribute="trailing" secondItem="Sfp-JJ-wOU" secondAttribute="trailing" id="3Gq-KY-M9P"/>
+                            <constraint firstItem="Sfp-JJ-wOU" firstAttribute="top" secondItem="qeA-LG-smN" secondAttribute="top" id="3ac-C3-uGE"/>
+                            <constraint firstItem="TVF-KQ-dVD" firstAttribute="bottom" secondItem="Hwa-Xq-DJp" secondAttribute="bottom" id="D46-Q6-gaE"/>
+                            <constraint firstItem="Hwa-Xq-DJp" firstAttribute="leading" secondItem="TVF-KQ-dVD" secondAttribute="leading" id="ESf-QU-QhQ"/>
+                            <constraint firstItem="Sfp-JJ-wOU" firstAttribute="leading" secondItem="TVF-KQ-dVD" secondAttribute="leading" id="KnA-OS-LQb"/>
+                            <constraint firstItem="TVF-KQ-dVD" firstAttribute="trailing" secondItem="Hwa-Xq-DJp" secondAttribute="trailing" id="YdW-I3-TLT"/>
+                            <constraint firstItem="Hwa-Xq-DJp" firstAttribute="top" secondItem="Sfp-JJ-wOU" secondAttribute="bottom" id="mcK-Ta-UQz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TVF-KQ-dVD"/>
+                    </view>
+                    <connections>
+                        <outlet property="selectionViewContainer" destination="Sfp-JJ-wOU" id="KiT-2o-9sx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5vf-A1-xG2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="146" y="1483"/>
+        </scene>
         <!--New Task View Controller-->
         <scene sceneID="nFh-ux-WOo">
             <objects>

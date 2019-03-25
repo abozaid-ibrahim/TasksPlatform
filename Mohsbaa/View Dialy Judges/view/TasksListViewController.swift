@@ -19,7 +19,9 @@ final class TasksListViewController: UITableViewController {
     }
     @objc private func onAddClicked(sender:Any){
         let newtaskController =  NewTaskRouter.createNewTaskModule()
-        self.navigationController?.pushViewController(newtaskController, animated: true)
+//        self.navigationController?.pushViewController(newtaskController, animated: true)
+let cont = UIViewController.selectionViewController
+self.present(cont, animated: true, completion: nil)
     }
     
     

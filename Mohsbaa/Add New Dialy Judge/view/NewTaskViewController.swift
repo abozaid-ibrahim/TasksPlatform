@@ -23,9 +23,12 @@ final class NewTaskViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = addItem
         
     }
-    @objc private func onSaveClicked(sender:Any){
-        let task = UserTask(name: taskTextField.text ?? "")
-        presenter?.onSaveNewTaskClicked(task: task)
+//    @objc private func onSaveClicked(sender:Any){
+//        let task = UserTask(context: taskTextField.text ?? "")
+//        task.subTasks  = subTasksFields.map{ $0.text ?? "" }
+//            .filter{!$0.isEmpty}
+//            .map{UserTask(name: $0)}
+//        presenter?.onSaveNewTaskClicked(task: task)
     }
     
     
@@ -36,6 +39,7 @@ final class NewTaskViewController: UIViewController {
         let newSubTaskField = SubTaskTextField()
         self.stackView.addArrangedSubview(newSubTaskField)
         subTasksFields.append(newSubTaskField)
+        newSubTaskField.becomeFirstResponder()
     }
     
 }

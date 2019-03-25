@@ -8,10 +8,15 @@
 
 import UIKit
 final class SubTaskTextField:UITextField{
-    convenience override init(frame: CGRect) {
-        self.init()
-        
+    
+    required override init(frame: CGRect) {
+            super.init(frame: frame)
+//            self.layer.cornerRadius = 5.0
+//            self.layer.borderColor = UIColor.gray.cgColor
+//            self.layer.borderWidth = 0.5
+//            self.tintColor = UIColor.white
     }
-    
-    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }

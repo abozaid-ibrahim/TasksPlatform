@@ -18,6 +18,7 @@ final class NewTaskRouter{
         interactor.presenter = presenter
         newTaskVC.presenter = presenter
         presenter.interactor = interactor
+        presenter.wireFrame = NewTaskRouter()
         presenter.attach(view: newTaskVC)
         return newTaskVC
         

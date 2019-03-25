@@ -32,6 +32,12 @@
 		6C51E55522458C5A00F657DA /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C51E55422458C5A00F657DA /* Reachability.swift */; };
 		6C51E5592247D44200F657DA /* TasksDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6C51E5572247D44200F657DA /* TasksDataModel.xcdatamodeld */; };
 		6C51E55B2247D61900F657DA /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C51E55A2247D61900F657DA /* DatabaseManager.swift */; };
+		6C51E560224905AF00F657DA /* ChoiceCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C51E55E224905AF00F657DA /* ChoiceCollectionViewController.swift */; };
+		6C51E561224905AF00F657DA /* ChoiceCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C51E55F224905AF00F657DA /* ChoiceCollectionViewController.xib */; };
+		6C51E5642249064600F657DA /* ChoiceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C51E5622249064600F657DA /* ChoiceCollectionViewCell.swift */; };
+		6C51E5652249064600F657DA /* ChoiceCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C51E5632249064600F657DA /* ChoiceCollectionViewCell.xib */; };
+		6C51E567224916FB00F657DA /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C51E566224916FB00F657DA /* Protocols.swift */; };
+		6C51E5692249181300F657DA /* ChoiceCollectionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C51E5682249181300F657DA /* ChoiceCollectionViewTests.swift */; };
 		7FE5BBE68A2708EE7EAACDBB /* Pods_MohsbaaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC588EDB01E490E9055756DD /* Pods_MohsbaaTests.framework */; };
 		80420A6C579CCC163C6BF40D /* Pods_Mohsbaa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2925784D7ACFF9CD130401F3 /* Pods_Mohsbaa.framework */; };
 /* End PBXBuildFile section */
@@ -78,6 +84,12 @@
 		6C51E55422458C5A00F657DA /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		6C51E5582247D44200F657DA /* TasksDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TasksDataModel.xcdatamodel; sourceTree = "<group>"; };
 		6C51E55A2247D61900F657DA /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		6C51E55E224905AF00F657DA /* ChoiceCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceCollectionViewController.swift; sourceTree = "<group>"; };
+		6C51E55F224905AF00F657DA /* ChoiceCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChoiceCollectionViewController.xib; sourceTree = "<group>"; };
+		6C51E5622249064600F657DA /* ChoiceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceCollectionViewCell.swift; sourceTree = "<group>"; };
+		6C51E5632249064600F657DA /* ChoiceCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChoiceCollectionViewCell.xib; sourceTree = "<group>"; };
+		6C51E566224916FB00F657DA /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		6C51E5682249181300F657DA /* ChoiceCollectionViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceCollectionViewTests.swift; sourceTree = "<group>"; };
 		7AD59D602FD8E7CC01AE36C8 /* Pods-Mohsbaa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mohsbaa.debug.xcconfig"; path = "Target Support Files/Pods-Mohsbaa/Pods-Mohsbaa.debug.xcconfig"; sourceTree = "<group>"; };
 		9ECD7A1C8BE2E53704179407 /* Pods-Mohsbaa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mohsbaa.release.xcconfig"; path = "Target Support Files/Pods-Mohsbaa/Pods-Mohsbaa.release.xcconfig"; sourceTree = "<group>"; };
 		CC588EDB01E490E9055756DD /* Pods_MohsbaaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MohsbaaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +139,7 @@
 		6C314E29223FF62600C3AA46 /* Mohsbaa */ = {
 			isa = PBXGroup;
 			children = (
+				6C51E55C2249057E00F657DA /* common */,
 				6C51E5562247CF3A00F657DA /* core Data */,
 				6C51E5512245826A00F657DA /* networkLayer */,
 				6C314E9922411DB400C3AA46 /* Sourcery Templates */,
@@ -148,6 +161,7 @@
 			children = (
 				6C314E42223FF62700C3AA46 /* MohsbaaTests.swift */,
 				6C314E44223FF62700C3AA46 /* Info.plist */,
+				6C51E5682249181300F657DA /* ChoiceCollectionViewTests.swift */,
 			);
 			path = MohsbaaTests;
 			sourceTree = "<group>";
@@ -277,6 +291,26 @@
 			path = "core Data";
 			sourceTree = "<group>";
 		};
+		6C51E55C2249057E00F657DA /* common */ = {
+			isa = PBXGroup;
+			children = (
+				6C51E55D2249058700F657DA /* selectable collection view */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		6C51E55D2249058700F657DA /* selectable collection view */ = {
+			isa = PBXGroup;
+			children = (
+				6C51E55E224905AF00F657DA /* ChoiceCollectionViewController.swift */,
+				6C51E55F224905AF00F657DA /* ChoiceCollectionViewController.xib */,
+				6C51E5622249064600F657DA /* ChoiceCollectionViewCell.swift */,
+				6C51E5632249064600F657DA /* ChoiceCollectionViewCell.xib */,
+				6C51E566224916FB00F657DA /* Protocols.swift */,
+			);
+			path = "selectable collection view";
+			sourceTree = "<group>";
+		};
 		D6D609E4BD429F80FABD8C56 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -387,6 +421,8 @@
 				6C314E9D22411EA900C3AA46 /* JSONRepresentable.stencil in Resources */,
 				6C314E30223FF62600C3AA46 /* Main.storyboard in Resources */,
 				6C314E9B22411DDC00C3AA46 /* .sourcery.yml in Resources */,
+				6C51E561224905AF00F657DA /* ChoiceCollectionViewController.xib in Resources */,
+				6C51E5652249064600F657DA /* ChoiceCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,17 +516,20 @@
 				6C51E5592247D44200F657DA /* TasksDataModel.xcdatamodeld in Sources */,
 				6C314E5D223FFC2400C3AA46 /* TaskTableViewCell.swift in Sources */,
 				6C314E2D223FF62600C3AA46 /* TasksListViewController.swift in Sources */,
+				6C51E5642249064600F657DA /* ChoiceCollectionViewCell.swift in Sources */,
 				6C314E57223FFA9300C3AA46 /* TasksDataRepository.swift in Sources */,
 				6C51E5482245733000F657DA /* SubTaskTextField.swift in Sources */,
 				6C314E9F22411EE500C3AA46 /* JSONAutoRepresentable.swift in Sources */,
 				6C51E54C2245762400F657DA /* NewTaskInteractor.swift in Sources */,
 				6C314E33223FF62600C3AA46 /* Mohsbaa.xcdatamodeld in Sources */,
+				6C51E567224916FB00F657DA /* Protocols.swift in Sources */,
 				6C51E55B2247D61900F657DA /* DatabaseManager.swift in Sources */,
 				6C314E67224004BD00C3AA46 /* NewTaskViewController.swift in Sources */,
 				6C314E65224003D300C3AA46 /* NewTaskRouter.swift in Sources */,
 				6C51E5502245767E00F657DA /* TaskAndSubTaskGrouping.swift in Sources */,
 				6C314E2B223FF62600C3AA46 /* AppDelegate.swift in Sources */,
 				6C51E553224582B000F657DA /* RemoteDataProxy.swift in Sources */,
+				6C51E560224905AF00F657DA /* ChoiceCollectionViewController.swift in Sources */,
 				6C314E5A223FFB1C00C3AA46 /* Task.swift in Sources */,
 				6C51E54A224575F300F657DA /* NewTaskPresenter.swift in Sources */,
 				6C51E55522458C5A00F657DA /* Reachability.swift in Sources */,
@@ -503,6 +542,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C314E43223FF62700C3AA46 /* MohsbaaTests.swift in Sources */,
+				6C51E5692249181300F657DA /* ChoiceCollectionViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

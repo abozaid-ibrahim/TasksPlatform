@@ -22,7 +22,11 @@ class MainViewController: UINavigationController {
 //        self.pushViewController(choices, animated: true)
     }
 }
-struct ChoiceItem:SelectableCellItem{
+struct ChoiceItem:Task, SelectableCellItem{
+    var name: String
+    
+    var subTasks: [Task]?
+    
     var id: Int
     
     var isSelected: Bool

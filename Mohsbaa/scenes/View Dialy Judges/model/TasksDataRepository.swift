@@ -19,8 +19,12 @@ final class TasksDataRepository:TasksRepositoryInput{
   
     
     func getAllTasks() {
+    
+        
+        
         output?.setData([])
     }
     
     
 }
+

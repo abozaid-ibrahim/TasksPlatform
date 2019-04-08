@@ -7,33 +7,12 @@
 //
 
 import UIKit
-protocol TasksRepoOutput:class {
-    func setData(_ tasks:[Task])
-}
 
 /**
  This part is VIPER architected
  This class fired for user choosing it's tasks,
  User could also create new UserTask,
  */
-final class SelectionViewPresenter:TasksRepoOutput{
-    var tasksRepo:TasksRepositoryInput = TasksDataRepository()
-    var view:SelectionView!
-    var tasks:[Task] = [Task]()
-    
-    func setData(_ tasks: [Task]) {
-        self.tasks.append(contentsOf: tasks)
-        view.hideLoading()
-        view.reloadCollection()
-    }
-    
-    
-    
-    func getTasks(){
-        view.showLoading()
-        tasksRepo.getAllTasks()
-    }
-}
 
 protocol SelectionView {
     func showLoading()
@@ -43,15 +22,16 @@ protocol SelectionView {
 class SelectionViewController: UIViewController {
     
     @IBOutlet weak var selectionViewContainer: UIView!
-    
+     let childVC = ChoiceCollectionViewController<ChoiceItem>.init(collectionViewLayout: UICollectionViewFlowLayout.init() )
+
+    var presenter = SelectionViewPresenter()
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.getTasks()
         
         
-        let strs = [ChoiceItem(id: 22, isSelected: false, title: "adsf", background: nil),ChoiceItem(id: 22, isSelected: false, title: "adsf", background: nil),ChoiceItem(id: 22, isSelected: false, title: "adsf", background: nil),ChoiceItem(id: 22, isSelected: false, title: "adsf", background: nil),ChoiceItem(id: 22, isSelected: false, title: "adsf", background: nil)]
+//        childVC.choices = presenter.tasks
         
-        let childVC = ChoiceCollectionViewController<ChoiceItem>.init(collectionViewLayout: UICollectionViewFlowLayout.init() )
-        childVC.choices = strs
         addChild(childVC)
         //Or, you could add auto layout constraint instead of relying on AutoResizing contraints
         childVC.view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
@@ -68,19 +48,20 @@ class SelectionViewController: UIViewController {
     
     
 }
-extension SelectionViewPresenter :SelectionView{
-func showLoading() {
+extension SelectionViewController :SelectionView{
+    func showLoading() {
+        ActivityLoadingIndicator.showLoad()
+        
+    }
     
-}
-
-func hideLoading() {
+    func hideLoading() {
+        ActivityLoadingIndicator.hideLoading()
+    }
     
-}
-
-func reloadCollection() {
+    func reloadCollection() {
+        self.childVC.collectionView.reloadData()
+    }
     
-}
-
     
 }
 extension UIViewController{

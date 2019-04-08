@@ -141,14 +141,10 @@
 		6C314E29223FF62600C3AA46 /* Mohsbaa */ = {
 			isa = PBXGroup;
 			children = (
-				6C51E56A22491AE500F657DA /* select your tasks */,
-				6C51E55C2249057E00F657DA /* common */,
+				6C358178225B7CE800BD3511 /* scenes */,
+				6C358177225B7CB100BD3511 /* shared components */,
 				6C51E5562247CF3A00F657DA /* core Data */,
-				6C51E5512245826A00F657DA /* networkLayer */,
 				6C314E9922411DB400C3AA46 /* Sourcery Templates */,
-				6C314E50223FF7AE00C3AA46 /* Set Dial Judge Progress */,
-				6C314E4F223FF79500C3AA46 /* View Dialy Judges */,
-				6C314E4D223FF75200C3AA46 /* Add New Dialy Judge */,
 				6C314E2A223FF62600C3AA46 /* AppDelegate.swift */,
 				6C314E2E223FF62600C3AA46 /* Main.storyboard */,
 				6C314E34223FF62700C3AA46 /* Assets.xcassets */,
@@ -276,6 +272,26 @@
 			path = "Sourcery Templates";
 			sourceTree = "<group>";
 		};
+		6C358177225B7CB100BD3511 /* shared components */ = {
+			isa = PBXGroup;
+			children = (
+				6C51E5512245826A00F657DA /* networkLayer */,
+				6C51E55D2249058700F657DA /* selectable collection view */,
+			);
+			path = "shared components";
+			sourceTree = "<group>";
+		};
+		6C358178225B7CE800BD3511 /* scenes */ = {
+			isa = PBXGroup;
+			children = (
+				6C314E50223FF7AE00C3AA46 /* Set Dial Judge Progress */,
+				6C314E4F223FF79500C3AA46 /* View Dialy Judges */,
+				6C314E4D223FF75200C3AA46 /* Add New Dialy Judge */,
+				6C51E56A22491AE500F657DA /* choose static tasks */,
+			);
+			path = scenes;
+			sourceTree = "<group>";
+		};
 		6C51E5512245826A00F657DA /* networkLayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,14 +310,6 @@
 			path = "core Data";
 			sourceTree = "<group>";
 		};
-		6C51E55C2249057E00F657DA /* common */ = {
-			isa = PBXGroup;
-			children = (
-				6C51E55D2249058700F657DA /* selectable collection view */,
-			);
-			path = common;
-			sourceTree = "<group>";
-		};
 		6C51E55D2249058700F657DA /* selectable collection view */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,12 +322,12 @@
 			path = "selectable collection view";
 			sourceTree = "<group>";
 		};
-		6C51E56A22491AE500F657DA /* select your tasks */ = {
+		6C51E56A22491AE500F657DA /* choose static tasks */ = {
 			isa = PBXGroup;
 			children = (
 				6C51E56B22491B0C00F657DA /* SelectionViewController.swift */,
 			);
-			path = "select your tasks";
+			path = "choose static tasks";
 			sourceTree = "<group>";
 		};
 		D6D609E4BD429F80FABD8C56 /* Pods */ = {
@@ -456,17 +464,35 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Mohsbaa/Pods-Mohsbaa-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
+				"${BUILT_PRODUCTS_DIR}/RxGesture/RxGesture.framework",
+				"${BUILT_PRODUCTS_DIR}/RxOptional/RxOptional.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SimpleCheckbox/SimpleCheckbox.framework",
+				"${BUILT_PRODUCTS_DIR}/VHUD/VHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxGesture.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxOptional.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SimpleCheckbox.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
